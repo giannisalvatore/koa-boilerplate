@@ -1,0 +1,24 @@
+{
+  "name": "koa-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development node index.js",
+    "build": "NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "axios": "^0.26.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "koa-sslify": "^5.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^2.6.7",
+    "plaiceholder": "^2.3.0",
+    "pm2": "^5.2.0",
+    "promise-mysql": "^5.2.0"
+  }
+}
