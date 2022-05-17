@@ -2,9 +2,9 @@ const router = require("koa-router")();
 const body = require("koa-body")();
 
 //folder
-const trade = require("./example");
+const example = require("./example");
 
 //api routes
-router.get("/trade/add", trade.addTrade);
+router.get("/example/add", example.add);
 
 module.exports = router;
