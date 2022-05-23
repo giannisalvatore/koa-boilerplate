@@ -10,6 +10,7 @@ const app = new Koa();
 const PORT = 4000;
 const ENVIRONMENT = process.env.NODE_ENV || "development";
 const HOST = process.env.HOST || "localhost";
+const CORS = ENVIRONMENT === "development" ? "*" : HOST;
 
 //utils
 const utils = require("./utils");
@@ -17,13 +18,8 @@ const utils = require("./utils");
 //api routes
 const api = require("./api");
 
-app.use(
-    cors({
-        "Access-Control-Allow-Origin":
-            ENVIRONMENT === "development" ? "*" : HOST,
-    })
-);
-
+app.use(cors({ "Access-Control-Allow-Origin": CORS }));
 app.use(koaBody());
 app.use(api.routes());
+
 app.listen(PORT);
